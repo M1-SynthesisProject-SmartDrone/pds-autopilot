@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/loguru/loguru.hpp
+loguru.hpp
+-
+sal.h
+-
+fmt/format.h
+-
+cstdarg
+-
+sstream
+-
+string
+-
+
+/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/src/Main.cpp
+iostream
+-
+sstream
+-
+vector
+-
+unistd.h
+-
+signal.h
+-
+loguru/loguru.hpp
+-
+math.h
+-
+

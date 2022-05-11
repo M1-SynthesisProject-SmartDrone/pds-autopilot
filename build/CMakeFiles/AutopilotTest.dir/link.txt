@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -g -DNDEBUG  -rdynamic CMakeFiles/AutopilotTest.dir/src/Main.cpp.o  -o ../bin/AutopilotTest  -lpthread -ldl lib/libloguru.a -lpthread -ldl 
