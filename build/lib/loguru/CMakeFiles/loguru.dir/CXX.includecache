@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib/loguru/loguru.cpp
+/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib/loguru/loguru.cpp
 loguru.hpp
-/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib/loguru/loguru.hpp
+/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib/loguru/loguru.hpp
 algorithm
 -
 atomic
@@ -48,7 +48,7 @@ linux/limits.h
 limits.h
 -
 TargetConditionals.h
-/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib/loguru/TargetConditionals.h
+/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib/loguru/TargetConditionals.h
 cxxabi.h
 -
 dlfcn.h
@@ -66,7 +66,7 @@ pthread_np.h
 windows.h
 -
 
-/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib/loguru/loguru.hpp
+/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib/loguru/loguru.hpp
 loguru.hpp
 -
 sal.h

@@ -6,5 +6,5 @@ CXX_FLAGS = -O2 -g -DNDEBUG   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib -I/home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/src 
+CXX_INCLUDES = -I/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib -I/home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/src 
 

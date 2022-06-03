@@ -3,4 +3,28 @@
 
 CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../lib/loguru/loguru.hpp
 CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../src/Main.cpp
+CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../src/arkins/Arkins.h
+CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../src/data/Coordinates.h
+CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../src/data/Informations.h
+CMakeFiles/AutopilotTest.dir/src/Main.cpp.o: ../src/data/Vector.h
+
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../lib/loguru/loguru.hpp
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../src/arkins/Arkins.cpp
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../src/arkins/Arkins.h
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../src/data/Coordinates.h
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../src/data/Informations.h
+CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o: ../src/data/Vector.h
+
+CMakeFiles/AutopilotTest.dir/src/data/Coordinates.cpp.o: ../src/data/Coordinates.cpp
+CMakeFiles/AutopilotTest.dir/src/data/Coordinates.cpp.o: ../src/data/Coordinates.h
+
+CMakeFiles/AutopilotTest.dir/src/data/Informations.cpp.o: ../src/data/Informations.cpp
+CMakeFiles/AutopilotTest.dir/src/data/Informations.cpp.o: ../src/data/Informations.h
+CMakeFiles/AutopilotTest.dir/src/data/Informations.cpp.o: ../src/data/Vector.h
+
+CMakeFiles/AutopilotTest.dir/src/data/Vector.cpp.o: ../src/data/Vector.cpp
+CMakeFiles/AutopilotTest.dir/src/data/Vector.cpp.o: ../src/data/Vector.h
+
+CMakeFiles/AutopilotTest.dir/src/old/Main.cpp.o: ../lib/loguru/loguru.hpp
+CMakeFiles/AutopilotTest.dir/src/old/Main.cpp.o: ../src/old/Main.cpp
 

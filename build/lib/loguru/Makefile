@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot
+CMAKE_SOURCE_DIR = /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build
+CMAKE_BINARY_DIR = /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build/CMakeFiles /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build/lib/loguru/CMakeFiles/progress.marks
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build/CMakeFiles 0
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build/CMakeFiles /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build/lib/loguru/CMakeFiles/progress.marks
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/clean
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/preinstall
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/preinstall
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/loguru/CMakeFiles/loguru.dir/rule:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/CMakeFiles/loguru.dir/rule
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f CMakeFiles/Makefile2 lib/loguru/CMakeFiles/loguru.dir/rule
 .PHONY : lib/loguru/CMakeFiles/loguru.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ loguru: lib/loguru/CMakeFiles/loguru.dir/rule
 
 # fast build rule for target.
 loguru/fast:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/build
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/build
 .PHONY : loguru/fast
 
 loguru.o: loguru.cpp.o
@@ -131,7 +131,7 @@ loguru.o: loguru.cpp.o
 
 # target to build an object file
 loguru.cpp.o:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.o
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.o
 .PHONY : loguru.cpp.o
 
 loguru.i: loguru.cpp.i
@@ -140,7 +140,7 @@ loguru.i: loguru.cpp.i
 
 # target to preprocess a source file
 loguru.cpp.i:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.i
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.i
 .PHONY : loguru.cpp.i
 
 loguru.s: loguru.cpp.s
@@ -149,7 +149,7 @@ loguru.s: loguru.cpp.s
 
 # target to generate assembly for a file
 loguru.cpp.s:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.s
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(MAKE) -f lib/loguru/CMakeFiles/loguru.dir/build.make lib/loguru/CMakeFiles/loguru.dir/loguru.cpp.s
 .PHONY : loguru.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

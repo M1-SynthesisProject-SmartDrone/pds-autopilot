@@ -1,1 +1,1 @@
-/usr/bin/c++  -O2 -g -DNDEBUG  -rdynamic CMakeFiles/AutopilotTest.dir/src/Main.cpp.o  -o ../bin/AutopilotTest  -lpthread -ldl lib/libloguru.a -lpthread -ldl 
+/usr/bin/c++  -O2 -g -DNDEBUG  -rdynamic CMakeFiles/AutopilotTest.dir/src/Main.cpp.o CMakeFiles/AutopilotTest.dir/src/arkins/Arkins.cpp.o CMakeFiles/AutopilotTest.dir/src/data/Coordinates.cpp.o CMakeFiles/AutopilotTest.dir/src/data/Informations.cpp.o CMakeFiles/AutopilotTest.dir/src/data/Vector.cpp.o CMakeFiles/AutopilotTest.dir/src/old/Main.cpp.o  -o ../bin/AutopilotTest  -lpthread -ldl lib/libloguru.a -lpthread -ldl 

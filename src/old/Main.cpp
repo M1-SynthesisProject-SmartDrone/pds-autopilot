@@ -70,7 +70,7 @@ void calculate_ratios(Coordinates droneCoordinates, Informations &infos, Coordin
 Coordinates findMax(std::vector<Coordinates> vector);
 Coordinates calculate_barycenter(std::vector<Coordinates> vector);
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
 	srand(time(0));
 	struct Informations infos;
@@ -79,8 +79,8 @@ int main(int argc, char *argv[])
 	droneCoordinates.longitude = blc_test[1];
 	droneCoordinates.latitude = blc_test[0];
 	droneCoordinates.rotation = blc_test[3];
-	/*LOG_F(INFO, "Information 0 (Position) : alt = %f | lat = %f | long = %f | rot = %f", droneCoordinates.altitude,
-		  droneCoordinates.latitude, droneCoordinates.longitude, droneCoordinates.rotation);*/
+	LOG_F(INFO, "Information 0 (Position) : alt = %f | lat = %f | long = %f | rot = %f", droneCoordinates.altitude,
+		  droneCoordinates.latitude, droneCoordinates.longitude, droneCoordinates.rotation);
 
 	////////////////////////////////// START MOCKS //////////////////////////////////
 	std::vector<Coordinates> attractivePoints;
@@ -115,8 +115,8 @@ int main(int argc, char *argv[])
 	//LOG_F(INFO, "Start the test autopilot program");
 	chrono::steady_clock::time_point start = chrono::steady_clock::now();
 
-	/*convert_polar_to_cartesian(droneCoordinates.altitude, droneCoordinates.latitude, droneCoordinates.longitude,
-							   droneCoordinates.x, droneCoordinates.y, droneCoordinates.z);*/
+	convert_polar_to_cartesian(droneCoordinates.altitude, droneCoordinates.latitude, droneCoordinates.longitude,
+							   droneCoordinates.x, droneCoordinates.y, droneCoordinates.z);
 	convert_polar_to_cartesian(droneCoordinates);
 	for (int attPoints = 0; attPoints < attractivePoints.size(); attPoints++)
 	{
@@ -136,7 +136,7 @@ int main(int argc, char *argv[])
 	LOG_F(INFO, "Process done in %ld microseconds", timeElapsed);
 	//LOG_F(INFO, "Informations 5 (info struct): rx = %f | ry = %f | rz = %f | rr = %f | inRange = %d | isArrived = %d", infos.ratiox, infos.ratioy, infos.ratioz, infos.ratior, infos.inRange, infos.isArrived);
 	return EXIT_SUCCESS;
-}
+}*/
 
 Coordinates findMax(std::vector<Coordinates> vector)
 {
@@ -339,5 +339,5 @@ bool isInRepulsionRadius(Coordinates &droneCoordinates, Coordinates &repulsionPo
 }
 
 float calculate_repulsion_coefficient(Coordinates &droneCoordinates, Coordinates &repulsionPoint){
-
+	return 0.0;
 }

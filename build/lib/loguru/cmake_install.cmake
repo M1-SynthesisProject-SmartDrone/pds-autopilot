@@ -1,4 +1,4 @@
-# Install script for directory: /home/aladd/Bureau/M1/ProjetSynthese/pds-autopilot/lib/loguru
+# Install script for directory: /home/aldric-vs/COURS/M1/projet_synthese/repos/pds-autopilot/lib/loguru
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
