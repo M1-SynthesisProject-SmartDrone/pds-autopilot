@@ -21,7 +21,7 @@ using namespace std;
 #define MATH_PI 3.141592
 #define RANGE 10000
 #define UNITARY_VECTOR 0.5
-#define ATTRACTION_POINTS_SIZE 3
+#define ATTRACTION_POINTS_SIZE 10
 #define REPULSION_RADIUS 100
 
 class Arkins

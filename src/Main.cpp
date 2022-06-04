@@ -1,9 +1,14 @@
 #include "arkins/Arkins.h"
 
+#include <time.h>
+
 #include <loguru/loguru.hpp>
+
+Coordinates createRandomPoint();
 
 int main(int argc, char* argv[]){
 	loguru::init(argc, argv);
+	srand(time(NULL));
 
 	////////////////////////////////// START MOCKS //////////////////////////////////
 	Coordinates droneCoordinates;
@@ -13,11 +18,7 @@ int main(int argc, char* argv[]){
 	{
 		for (int repet = 0; repet < 2; repet++)
 		{
-			Coordinates point;
-			point.x = (rand() % (int) (droneCoordinates.x + 10) + droneCoordinates.x);
-			point.y = (rand() % (int) (droneCoordinates.y + 10) + droneCoordinates.y);
-			point.z = (rand() % (int) (droneCoordinates.z + 10) + droneCoordinates.z);
-			point.rotation = (rand() % (int) (droneCoordinates.rotation + 10) + droneCoordinates.rotation);
+			Coordinates point = createRandomPoint();
 			if (repet == 1)
 			{
 				repulsivePoints.push_back(point);
@@ -46,4 +47,20 @@ int main(int argc, char* argv[]){
 	//ZERO POINTS
 	arkins.process(droneCoordinates);
 	arkins.deleteAttractivePoint();
+}
+
+float randomFloat(float min, float max)
+{
+	return ((float(rand()) / float(RAND_MAX)) * (max - min)) + min;
+}
+
+Coordinates createRandomPoint()
+{
+	Coordinates c;
+
+	c.x = randomFloat(-10.0f, 10.0f);
+	c.y = randomFloat(-10.0f, 10.0f);
+	c.z = randomFloat(-10.0f, 10.0f);
+	c.rotation = randomFloat(-10.0f, 10.0f);
+	return c;
 }
