@@ -1,6 +1,10 @@
 #include "arkins/Arkins.h"
 
-int main(){
+#include <loguru/loguru.hpp>
+
+int main(int argc, char* argv[]){
+	loguru::init(argc, argv);
+
 	////////////////////////////////// START MOCKS //////////////////////////////////
 	Coordinates droneCoordinates;
 	std::vector<Coordinates> attractivePoints;
@@ -31,7 +35,7 @@ int main(){
 	//LOG_F(INFO, "AttPointsVectorSize : %ld | RepPointsVectorSize : %ld", attractivePoints.size(), repulsivePoints.size());
 	////////////////////////////////// END MOCKS //////////////////////////////////
 
-	Arkins arkins = Arkins(droneCoordinates, attractivePoints, repulsivePoints, attractivePoints);
+	Arkins arkins = Arkins(attractivePoints, repulsivePoints, attractivePoints);
 	
 	//TWO POINTS
 	arkins.process(droneCoordinates);
