@@ -1,22 +1,29 @@
 #include "Arkins.h"
 
-Arkins::Arkins(){
+Arkins::Arkins()
+{
 
 }
 
 Arkins::Arkins(Coordinates droneCoordinates, std::vector<Coordinates> attractionPoints, std::vector<Coordinates> repulsionPoints,
-				std::vector<Coordinates> tangentialPoints) : droneCoordinates(droneCoordinates), attractionPoints(attractionPoints),
-				repulsionPoints(repulsionPoints), tangentialPoints(tangentialPoints){
+	std::vector<Coordinates> tangentialPoints) : droneCoordinates(droneCoordinates), attractionPoints(attractionPoints),
+	repulsionPoints(repulsionPoints), tangentialPoints(tangentialPoints)
+{}
+
+Informations& Arkins::getInfos()
+{
+	return infos;
 }
 
-void Arkins::process(Coordinates droneCoordinates){
+void Arkins::process(Coordinates droneCoordinates)
+{
 	this->droneCoordinates = droneCoordinates;
 
 	for (int attPoints = 0; attPoints < attractionPoints.size(); attPoints++)
 	{
 		calculate_dist_between_points(droneCoordinates, attractionPoints.at(attPoints));
 	}
-	
+
 	Coordinates maxPoint = findMax(attractionPoints);
 
 	calculate_coefficient_attraction(attractionPoints, maxPoint.distance_to_drone);
@@ -24,11 +31,13 @@ void Arkins::process(Coordinates droneCoordinates){
 	calculate_ratios(droneCoordinates, infos, barycenter);
 }
 
-void Arkins::deleteAttractivePoint(){
+void Arkins::deleteAttractivePoint()
+{
 	attractionPoints.erase(attractionPoints.begin());
 }
 
-void Arkins::resetAttractivePoints(std::vector<Coordinates> attractionPoints){
+void Arkins::resetAttractivePoints(std::vector<Coordinates> attractionPoints)
+{
 	this->attractionPoints = attractionPoints;
 }
 
@@ -69,16 +78,16 @@ Coordinates Arkins::calculate_barycenter(std::vector<Coordinates> vector)
 	return barycenter;
 }
 
-void Arkins::calculate_dist_between_points(Coordinates droneCoordinates, Coordinates &attractionPoint)
+void Arkins::calculate_dist_between_points(Coordinates droneCoordinates, Coordinates& attractionPoint)
 {
 	float dist = abs(sqrt(pow((droneCoordinates.x - attractionPoint.x), 2) + pow((droneCoordinates.y - attractionPoint.y), 2) + pow((droneCoordinates.z - attractionPoint.z), 2)));
 	attractionPoint.distance_to_drone = dist;
 }
 
-void Arkins::calculate_coefficient_attraction(std::vector<Coordinates> &vector, float maxDistance)
+void Arkins::calculate_coefficient_attraction(std::vector<Coordinates>& vector, float maxDistance)
 {
 	float coef = 0;
-	for (auto &coordinate : vector)
+	for (auto& coordinate : vector)
 	{
 		coef = 1 - coordinate.distance_to_drone / maxDistance;
 		coordinate.attraction = coef; //+ on est proche du point d'attraction, + le coefficient sera grand [d'où le 1 - rapport distance/maxDistance]
@@ -86,23 +95,26 @@ void Arkins::calculate_coefficient_attraction(std::vector<Coordinates> &vector, 
 }
 
 
-void Arkins::calculate_vector(Coordinates droneCoordinates, Coordinates targetCoordinates, float &x, float &y, float &z)
+void Arkins::calculate_vector(Coordinates droneCoordinates, Coordinates targetCoordinates, float& x, float& y, float& z)
 {
 	x = droneCoordinates.x - targetCoordinates.x;
 	y = droneCoordinates.y - targetCoordinates.y;
 	z = droneCoordinates.z - droneCoordinates.z;
 }
 
-bool Arkins:: isInRepulsionRadius(Coordinates &droneCoordinates, Coordinates &repulsionPoint){
-	if(droneCoordinates.x <= repulsionPoint.x + REPULSION_RADIUS && droneCoordinates.x >= repulsionPoint.x - REPULSION_RADIUS){
-		if(droneCoordinates.y <= repulsionPoint.y + REPULSION_RADIUS && droneCoordinates.z >= repulsionPoint.z - REPULSION_RADIUS){
-				return true;
+bool Arkins::isInRepulsionRadius(Coordinates& droneCoordinates, Coordinates& repulsionPoint)
+{
+	if (droneCoordinates.x <= repulsionPoint.x + REPULSION_RADIUS && droneCoordinates.x >= repulsionPoint.x - REPULSION_RADIUS)	
+{
+		if (droneCoordinates.y <= repulsionPoint.y + REPULSION_RADIUS && droneCoordinates.z >= repulsionPoint.z - REPULSION_RADIUS)
+		{
+			return true;
 		}
 	}
 	return false;
 }
 
-void Arkins::calculate_rotation(float hdg, float targeted_hdg, float &r)
+void Arkins::calculate_rotation(float hdg, float targeted_hdg, float& r)
 {
 	float theta = abs(hdg - targeted_hdg);
 
@@ -116,7 +128,7 @@ void Arkins::calculate_rotation(float hdg, float targeted_hdg, float &r)
 	}
 }
 
-void Arkins::calculate_ratios(Coordinates droneCoordinates, Informations &infos, Coordinates attractivePoint)
+void Arkins::calculate_ratios(Coordinates droneCoordinates, Informations& infos, Coordinates attractivePoint)
 {
 	/*
 		Ce qui sera retourné
